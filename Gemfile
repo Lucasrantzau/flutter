@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'coffee-script-source', '1.8.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 
 # Use ActiveModel has_secure_password
