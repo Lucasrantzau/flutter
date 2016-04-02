@@ -1,2 +1,66 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? # if the user is not signed in, render this %>
+	<style>
+		body {
+			background: url("/bg.png") no-repeat center center fixed;
+			-webkit-background-size: cover; /* These helps make full width so it looks good on any browers*/
+			-moz-background-size: cover; /* These helps make full width so it looks good on any browers*/
+			-o-background-size: cover; /* These helps make full width so it looks good on any browers*/
+			background-size: cover; /* These helps make full width so it looks good on any browers*/
+		}
+		h1 {
+			color: white;
+		}
+		.container-index {
+		}
+		.text {
+			color: white;
+		}
+		.footer-links {
+			text-align: center;
+			color: white;
+			margin-top: 15%;
+			font-size: 75%;
+		}
+		.log-in {
+			float: right;
+			width: 320px;
+			height: 160px;
+			margin-top: 8%;
+		}
+		.sign-up {
+			float: right;
+			width: 320px;
+			height: 250px;
+		}
+	</style>
+
+	<div class="container-index row">
+	<div class="col-sm-6">
+		<h1>Welcome to Flutter</h1>
+		<p class="text">
+			Connect with people in your life. Make new friends. Share your adventures.<br>
+			Connect in any way possible, this is the ultimate social media platform.
+		</p>
+	</div>
+	
+	<div class="col-sm-6">
+		<div class="log-in panel">
+			Log In
+		</div>
+		<div class="sign-up panel">
+			Sign Up
+		</div>
+	</div>
+
+	<div class="col-sm-12">
+		<p class="footer-links">
+			About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  info  Brand  Advertise  Businesses  Media  Developers  Directory  ©  2016  Flutter 
+		</p>
+	</div>
+	</div>
+
+<% else # If the user IS signed in, render the following %>  
+
+Signed In
+
+<% end %>
