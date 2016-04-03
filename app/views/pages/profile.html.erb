@@ -1,19 +1,15 @@
-<div class="row">
-	<div class="col-xs-12">
-		<div class="jumbotron">
-			<%= @username %>
-		</div>
-	</div>
-</div>
-
 <!-- Row 2 begins -->
 <div class="row">
 	<div class="col-xs-3">
-		<div class="panel panel-default">
-  		<div class="panel-body">
-				<p>Profile</p>
-			</div>
+		<div class="col sm-12" style="margin-top: -200px;">
+				<img src="/JTavatar.png" class="rounded-img" height="200px" width="200px">
 		</div>
+		<div class="col-sm-12">
+        <h3 style="font-weight: bold;"><%= params[:id] %></h3>
+        <p>
+          Graphic designer and Ruby on Rails developer. Take a look at my work on my portfolio <a href="http://www.Lucasrantzau.com">http://www.Lucasrantzau.com</a>
+        </p>
+     </div>
 	</div>
 
 	<div class="col-xs-6">
@@ -47,15 +43,26 @@
 	</div>
 
 	<div class="col-xs-3">
-		<div class="panel panel-default">
-  		<div class="panel-body">
-				<p>Who to follow</p>
-			</div>
-		</div>
-		<div class="panel panel-default">
-  		<div class="panel-body">
-  			<p>Trends</p>
-  		</div>
-  	</div>
+	
+        <div class="panel panel-default">
+          <div class="panel-body">
+             <h5 style="color: grey; font-size: 125%;">Who to follow</h5>
+             <% for @u in @toFollow do %>
+               <p style="font-weight: bold; opacity: 0.85;" ><a href="/user/<%= @u.username %>"><%= @u.username %></a></p>
+             <% end %>
+          </div>
+        </div>
+
+        <div class="panel panel-default"> <!-- Trends section -->
+          <div class="panel-body">
+             <h5 style="color: grey; font-size: 125%;">Trends</h5>
+            <a href="">#Trend #1</a><br>
+              <span style="color: grey;">31k Posts</span><br><br>
+            <a href="">#Trend #2</a><br>
+              <span style="color: grey;">25k Posts</span><br><br>
+            <a href="">#Trend #3</a><br>
+          <span style="color: grey;">16k Posts</span><br><br>
+       </div>
+     </div>
 	</div>
 </div>
